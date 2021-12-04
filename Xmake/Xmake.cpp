@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.3";
+    string version = "0.1.4";
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
