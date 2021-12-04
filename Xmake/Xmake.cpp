@@ -3,7 +3,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-
+#include <limits>
 #include "function.h"
 using namespace std;
 
