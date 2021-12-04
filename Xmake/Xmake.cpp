@@ -1,6 +1,5 @@
-// Xmake.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
+//Xmake Main file 
+//GitHub: https://github.com/awesomelewis2007/Xmake
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,8 +8,8 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.1";
-
+    string version = "0.1.2";
+    bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
     {
@@ -44,8 +43,15 @@ int main(int argc, char** argv) {
             file.close();
 
         }
+        if (arg == "-v") {
+            verbose = true;
+        }
+        if (arg == "--version") {
+            cout << version << "\n";
+        }
     }
     ifstream file(argv[1]);
+    int n_command = 1;
     if (file.is_open())
     {
         string line;
@@ -57,10 +63,16 @@ int main(int argc, char** argv) {
             }
             if (line.rfind("$", 0) == 0) { //function
                 line.erase(0, 1);
+                if (verbose) {
+                    cout << "F";
+                }
                 continue;
             }
             if (line.rfind("!EXIT", 0) == 0) { //function
                 line.erase(0, 1);
+                if (verbose) {
+                    cout << "exiting due to a !EXIT call\n";
+                }
                 return 0;
             }
             if (line.rfind("!PAUSE", 0) == 0) { //function
@@ -71,8 +83,15 @@ int main(int argc, char** argv) {
                 input.clear();
                 continue;
             }
+            if (verbose) {
+                cout << "C" << n_command << " |" << line << "\n";
+                n_command = n_command + 1;
+            }
             system(line.c_str());
         }
+    }
+    else {
+        cout << "Cant find file\n";
     }
 
 }

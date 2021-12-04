@@ -35,7 +35,7 @@ int run_function(string function, string f) {
             line.erase(0, 1);
             string input;
             cout << "Press enter to continue>";
-            std::cin >> input;
+            cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
             input.clear();
             continue;
         }
