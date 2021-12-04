@@ -48,6 +48,7 @@ int main(int argc, char** argv) {
         }
         if (arg == "--version") {
             cout << version << "\n";
+            return 0;
         }
     }
     ifstream file(argv[1]);
