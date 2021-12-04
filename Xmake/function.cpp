@@ -28,16 +28,20 @@ int run_function(string function, string f) {
             }
         }
         if (line.rfind("!EXIT", 0) == 0) { //function
-            line.erase(0, 1);
-            return 0;
+            if (skip == false) {
+                line.erase(0, 1);
+                return 0;
+            }
         }
         if (line.rfind("!PAUSE", 0) == 0) { //function
-            line.erase(0, 1);
-            string input;
-            cout << "Press enter to continue>";
-            cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
-            input.clear();
-            continue;
+            if (skip == false) {
+                line.erase(0, 1);
+                string input;
+                cout << "Press enter to continue>";
+                cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
+                input.clear();
+                continue;
+            }
         }
         if (skip == false) {
             system(line.c_str());
