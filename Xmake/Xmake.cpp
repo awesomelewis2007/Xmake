@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.0";
+    string version = "0.1.1";
 
     string arg;
     for (int i = 0; i < argc; ++i)
@@ -67,7 +67,7 @@ int main(int argc, char** argv) {
                 line.erase(0, 1);
                 string input;
                 cout << "Press enter to continue>";
-                std::cin >> input;
+                cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
                 input.clear();
                 continue;
             }
