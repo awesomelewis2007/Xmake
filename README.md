@@ -4,7 +4,7 @@ Xmake is an alternative to Make
 
 Xmake has its own syntax
 
-##Example 
+## Example 
 ```
 //this is a comment it will be ignored
 $main
