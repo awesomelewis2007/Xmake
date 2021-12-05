@@ -4,16 +4,19 @@
 #include <fstream>
 #include <string>
 #include <limits>
-#include "function.h"
+#include "Xmake.h"
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.5";
+    string version = "0.1.6";
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
     {
         arg = argv[i];
+        if (arg == "--help") {
+            help();
+        }
         if (arg == "-f") {
             ifstream file(argv[1]);
             if (file.is_open()) {

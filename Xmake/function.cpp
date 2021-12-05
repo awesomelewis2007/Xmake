@@ -2,7 +2,7 @@
 #include <fstream>
 #include <string>
 #include <limits>
-#include "function.h"
+#include "Xmake.h"
 int run_function(string function, string f) {
     /// <summary>
     /// Runs only thr function you specify
