@@ -1,5 +1,5 @@
-#ifndef FUNCTION_INTERPRETER
-#define FUNCTION_INTERPRETER
+#ifndef INTERPRETER
+#define INTERPRETER
 #include <iostream>
 #include <fstream>
 #include <string>

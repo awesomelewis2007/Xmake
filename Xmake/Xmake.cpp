@@ -4,11 +4,12 @@
 #include <fstream>
 #include <string>
 #include <limits>
+#include <stdlib.h>
 #include "Xmake.h"
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.6";
+    string version = "0.1.7";
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
@@ -34,7 +35,7 @@ int main(int argc, char** argv) {
                     }
                 }
             }
-            return 0;
+            exit(0);
         }
         if (arg == "--init") {
             string filename;
@@ -44,14 +45,14 @@ int main(int argc, char** argv) {
             file.open(filename);
             file << "//Xmake File\n$main\necho 'This is a command'";
             file.close();
-
+            exit(0);
         }
         if (arg == "-v") {
             verbose = true;
         }
         if (arg == "--version") {
             cout << version << "\n";
-            return 0;
+            exit(0);
         }
     }
     ifstream file(argv[1]);
@@ -77,7 +78,7 @@ int main(int argc, char** argv) {
                 if (verbose) {
                     cout << "exiting due to a !EXIT call\n";
                 }
-                return 0;
+                exit(0);
             }
             if (line.rfind("!PAUSE", 0) == 0) { //function
                 line.erase(0, 1);
