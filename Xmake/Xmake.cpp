@@ -1,5 +1,6 @@
 //Xmake Main file 
 //GitHub: https://github.com/awesomelewis2007/Xmake
+//[Args]
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -9,7 +10,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.8";
+    string version = "0.1.9";
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)

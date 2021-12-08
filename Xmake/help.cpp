@@ -1,3 +1,5 @@
+// Xmake help file
+// This script is only run when the --help argument is used
 #include <iostream>
 #include <fstream>
 #include <string>

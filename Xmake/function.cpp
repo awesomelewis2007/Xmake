@@ -1,7 +1,10 @@
+// This is the function handler file
+// This script is only used on the -f argument 
 #include <iostream>
 #include <fstream>
 #include <string>
 #include <limits>
+
 #include "Xmake.h"
 int run_function(string function, string f) {
     /// <summary>
