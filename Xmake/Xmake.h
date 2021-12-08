@@ -1,7 +1,7 @@
 // Xmake headder file
 // This should contain all functions for Xmake
-#ifndef INTERPRETER
-#define INTERPRETER
+#ifndef XMAKE
+#define XMAKE
 #include <iostream>
 #include <fstream>
 #include <string>

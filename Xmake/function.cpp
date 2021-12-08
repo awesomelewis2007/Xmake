@@ -7,12 +7,6 @@
 
 #include "Xmake.h"
 int run_function(string function, string f) {
-    /// <summary>
-    /// Runs only thr function you specify
-    /// </summary>
-    /// <param name="function"></param>
-    /// <param name="f"></param>
-    /// <returns></returns>
     ifstream file(f);
     string line;
     bool skip{};
