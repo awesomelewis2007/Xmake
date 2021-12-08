@@ -9,7 +9,7 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.7";
+    string version = "0.1.8";
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
@@ -41,9 +41,13 @@ int main(int argc, char** argv) {
             string filename;
             cout << "Enter filename>";
             std::cin >> filename;
+            string description;
+            cout << "Enter description>";
+            std::cin >> description;
             ofstream file;
             file.open(filename);
-            file << "//Xmake File\n$main\necho 'This is a command'";
+            file << "//Xmake file\n//" << description << "\n";
+            file << "$main\necho 'This is a command'";
             file.close();
             exit(0);
         }
