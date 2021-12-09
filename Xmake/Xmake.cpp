@@ -9,7 +9,12 @@
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.7";
+    string version = "";
+    std::ifstream versionfile("AppData/version");
+    std::string str;
+    while (std::getline(versionfile, str)) {
+        version = version + str;
+    }
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
