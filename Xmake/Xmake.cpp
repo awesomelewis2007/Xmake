@@ -7,10 +7,11 @@
 #include <limits>
 #include <stdlib.h>
 #include "Xmake.h"
+#include "Global.h" // <-- includes global varibles
 using namespace std;
 
 int main(int argc, char** argv) {
-    string version = "0.1.12";
+    string version = ver;
     bool verbose = false;
     string arg;
     for (int i = 0; i < argc; ++i)
