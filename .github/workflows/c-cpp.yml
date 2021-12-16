@@ -16,4 +16,4 @@ jobs:
     - name: compile
       run: |
         cd Xmake
-        g++ Xmake.cpp function.cpp help.cpp
+        g++ Xmake.cpp function.cpp help.cpp Global.cpp 
