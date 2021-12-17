@@ -1,6 +1,11 @@
 *.exe
 *.obj
 *test
-/build
-/debug
+*.out
+*.o
+*.s
+build/
+debug/
+x86/
+x64/
 /.vs
