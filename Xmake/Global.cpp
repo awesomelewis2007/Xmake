@@ -7,5 +7,5 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
-std::string ver = "0.1.13";
-std::string build_type = "BETA";
+std::string ver = "0.1.15";
+std::string build_type = "ALPHA";

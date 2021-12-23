@@ -75,18 +75,18 @@ int main(int argc, char** argv) {
             if (line.rfind("$", 0) == 0) { //function
                 line.erase(0, 1);
                 if (verbose) {
-                    cout << "F";
+                    cout << "F" << "  |" << line << "\n";
                 }
                 continue;
             }
-            if (line.rfind("!EXIT", 0) == 0) { //function
+            if (line.rfind("!EXIT", 0) == 0) { //exit
                 line.erase(0, 1);
                 if (verbose) {
                     cout << "exiting due to a !EXIT call\n";
                 }
                 exit(0);
             }
-            if (line.rfind("!PAUSE", 0) == 0) { //function
+            if (line.rfind("!PAUSE", 0) == 0) { //pause
                 line.erase(0, 1);
                 string input;
                 cout << "Press enter to continue>";
@@ -94,10 +94,20 @@ int main(int argc, char** argv) {
                 input.clear();
                 continue;
             }
+            if (line.rfind("Always:", 0) == 0) { //always run
+                line.erase(0, 7);
+                if (verbose) {
+                    cout << "A" << n_command << " |" << line << "\n";
+                    n_command = n_command + 1;
+                }
+                system(line.c_str());
+                continue;
+            }
             if (verbose) {
                 cout << "C" << n_command << " |" << line << "\n";
                 n_command = n_command + 1;
             }
+
             system(line.c_str());
         }
     }
