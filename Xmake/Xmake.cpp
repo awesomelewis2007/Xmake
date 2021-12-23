@@ -75,7 +75,7 @@ int main(int argc, char** argv) {
             if (line.rfind("$", 0) == 0) { //function
                 line.erase(0, 1);
                 if (verbose) {
-                    cout << "F";
+                    cout << "F" << "  |" << line << "\n";
                 }
                 continue;
             }
@@ -96,6 +96,10 @@ int main(int argc, char** argv) {
             }
             if (line.rfind("Always:", 0) == 0) { //always run
                 line.erase(0, 7);
+                if (verbose) {
+                    cout << "A" << n_command << " |" << line << "\n";
+                    n_command = n_command + 1;
+                }
                 system(line.c_str());
                 continue;
             }
