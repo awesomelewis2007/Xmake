@@ -25,13 +25,13 @@ int run_function(string function, string f) {
                 continue;
             }
         }
-        if (line.rfind("!EXIT", 0) == 0) { //function
+        if (line.rfind("!EXIT", 0) == 0) { //exit
             if (skip == false) {
                 line.erase(0, 1);
                 return 0;
             }
         }
-        if (line.rfind("!PAUSE", 0) == 0) { //function
+        if (line.rfind("!PAUSE", 0) == 0) { //pause
             if (skip == false) {
                 line.erase(0, 1);
                 string input;
@@ -43,6 +43,11 @@ int run_function(string function, string f) {
         }
         if (skip == false) {
             system(line.c_str());
+        }
+        if (line.rfind("Always:", 0) == 0) { //always run
+            line.erase(0, 7);
+            system(line.c_str());
+            continue;
         }
     }
     return 0;
