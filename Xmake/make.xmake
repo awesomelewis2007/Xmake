@@ -1,7 +1,7 @@
 //For this file use Xmake
 $build_linux
-//Function for WSL only (Window subsystem for linux)
-g++ Xmake.cpp function.cpp
+//This function is for only Linux based systems
+g++ Xmake.cpp function.cpp Global.cpp
 $build_windows
-//Function for windows only
-cl Xmake.cpp function.cpp
+//This Function is for only windows based systems
+cl Xmake.cpp function.cpp Global.cpp
