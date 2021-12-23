@@ -1,9 +1,0 @@
-//Xmake file
-//Test
-$main
-echo 'NOOOO'
-$test1
-echo 'NOOOO'
-Always:echo 'Yesss_1'
-$runme
-echo 'Yesss_2'
