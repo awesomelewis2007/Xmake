@@ -1,8 +1,8 @@
 # Xmake
 <img src="https://img.icons8.com/fluency/96/000000/wrench.png"/>
+
 Xmake is an alternative to Make
 
-Xmake has its own syntax
 
 ## Example 
 ```
