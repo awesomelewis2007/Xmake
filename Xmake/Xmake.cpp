@@ -42,10 +42,10 @@ int main(int argc, char** argv) {
         if (arg == "--init") {
             string filename;
             cout << "Enter filename>";
-            std::cin >> filename;
+            cin >> filename;
             string description;
             cout << "Enter description>";
-            std::cin >> description;
+            cin >> description;
             ofstream file;
             file.open(filename);
             file << "//Xmake file\n//" << description << "\n";
@@ -90,7 +90,7 @@ int main(int argc, char** argv) {
                 line.erase(0, 1);
                 string input;
                 cout << "Press enter to continue>";
-                cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 input.clear();
                 continue;
             }

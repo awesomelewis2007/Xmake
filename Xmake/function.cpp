@@ -6,6 +6,8 @@
 #include <limits>
 
 #include "Xmake.h"
+using namespace std;
+
 int run_function(string function, string f) {
     ifstream file(f);
     string line;
@@ -36,7 +38,7 @@ int run_function(string function, string f) {
                 line.erase(0, 1);
                 string input;
                 cout << "Press enter to continue>";
-                cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
                 input.clear();
                 continue;
             }

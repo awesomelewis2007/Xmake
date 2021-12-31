@@ -9,6 +9,7 @@
 #include <fstream>
 #include <string>
 #include <stdlib.h>
-extern std::string ver;
-extern std::string build_type;
+using namespace std;
+extern string ver;
+extern string build_type;
 #endif
