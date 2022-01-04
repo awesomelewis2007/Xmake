@@ -8,5 +8,5 @@
 #include <string>
 #include <stdlib.h>
 using namespace std;
-string ver = "0.1.16";
+string ver = "0.1.17";
 string build_type = "BETA";
