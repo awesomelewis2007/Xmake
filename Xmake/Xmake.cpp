@@ -6,8 +6,10 @@
 #include <string>
 #include <limits>
 #include <stdlib.h>
+
 #include "Xmake.h"
-#include "Global.h" // <-- includes global varibles
+#include "Global.h"
+
 using namespace std;
 
 int main(int argc, char** argv) {
@@ -27,7 +29,6 @@ int main(int argc, char** argv) {
                 while (getline(file, line))
                 {
                     if (line.rfind("//", 0) == 0) { //comment
-                        line.erase(0, 1);
                         continue;
                     }
                     if (line.rfind("$", 0) == 0) { //function
@@ -69,7 +70,6 @@ int main(int argc, char** argv) {
         while (getline(file, line))
         {
             if (line.rfind("//", 0) == 0) { //comment
-                line.erase(0, 1);
                 continue;
             }
             if (line.rfind("$", 0) == 0) { //function
